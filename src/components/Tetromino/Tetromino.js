@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import {
   ShapeI,
   ShapeJ,
@@ -9,20 +9,31 @@ import {
   ShapeZ,
 } from 'components/Tetromino';
 
-const shapeArray = [
-  <ShapeI />,
-  <ShapeJ />,
-  <ShapeL />,
-  <ShapeO />,
-  <ShapeS />,
-  <ShapeT />,
-  <ShapeZ />,
-];
+function Tetromino(props, ref) {
+  const { x, y } = props;
 
-let randomNumber = Math.floor(Math.random() * shapeArray.length);
+  const styles = {
+    position: 'relative',
+    top: y,
+    left: x,
+  };
 
-function Tetromino({ tetrominoClass }) {
-  return <div>{shapeArray[randomNumber]}</div>;
+  const shapeArray = [
+    <ShapeI />,
+    <ShapeJ />,
+    <ShapeL />,
+    <ShapeO />,
+    <ShapeS />,
+    <ShapeT />,
+    <ShapeZ />,
+  ];
+
+  let randomNumber = Math.floor(Math.random() * shapeArray.length);
+  return (
+    <div className='block__wrapper' ref={ref} style={styles}>
+      {shapeArray[randomNumber]}
+    </div>
+  );
 }
 
-export default Tetromino;
+export default forwardRef(Tetromino);

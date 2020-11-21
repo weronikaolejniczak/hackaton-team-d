@@ -27,7 +27,7 @@ function App() {
   return (
     <div className='App'>
       <Board>
-        <Tetromino tetrominoClass='block__wrapper' />
+        <Tetromino ref={currentShape} x={currentShapeX} y={currentShapeY} />
         <ShapeL ref={currentShape} x={currentShapeX} y={currentShapeY} />
       </Board>
     </div>
