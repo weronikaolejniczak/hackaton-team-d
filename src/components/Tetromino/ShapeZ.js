@@ -2,7 +2,7 @@ import React from 'react';
 
 import Block from 'components/Block';
 
-function ShapeL() {
+function ShapeZ() {
   return (
     <div className='block__wrapper'>
       <Block />
@@ -13,4 +13,4 @@ function ShapeL() {
   );
 }
 
-export default ShapeL;
+export default ShapeZ;
