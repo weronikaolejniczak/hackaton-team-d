@@ -1,9 +1,9 @@
 import React from 'react';
 
-import './style.css';
+import './Block.css';
 
-function Block() {
-  return <div className='block' />;
+function Block({ color }) {
+  return <div className='Block' style={{color: color}} />;
 }
 
 export default Block;
