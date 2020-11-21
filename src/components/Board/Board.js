@@ -2,9 +2,9 @@ import React from 'react';
 
 import './Board.css';
 
-function Board() {
+function Board({ children }) {
     return (
-        <div className="Board">BOARD</div>
+        <div className="Board">{children}</div>
     );
 }
 
