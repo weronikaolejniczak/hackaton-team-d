@@ -9,6 +9,7 @@ import {
   ShapeS,
   ShapeT,
   ShapeZ,
+  Tetromino,
 } from 'components/Tetromino';
 import './App.css';
 
@@ -18,9 +19,7 @@ function App() {
   const currentShape = createRef();
 
   const handleGravity = () => {
-    if (currentShapeY < 500) {
-      setCurrentShapeY(currentShapeY + 25);
-    }
+    currentShapeY < 500 && setCurrentShapeY(currentShapeY + 25);
   };
 
   setTimeout(() => handleGravity(), 1000);
@@ -47,6 +46,7 @@ function App() {
   return (
     <div className='App'>
       <Board>
+        <Tetromino ref={currentShape} x={currentShapeX} y={currentShapeY} />
         <ShapeL ref={currentShape} x={currentShapeX} y={currentShapeY} />
       </Board>
     </div>
