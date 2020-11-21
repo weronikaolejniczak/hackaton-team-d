@@ -3,7 +3,7 @@ import React, { useState, useEffect, createRef } from 'react';
 import { Tetromino } from 'components';
 import './Board.css';
 
-function Board() {
+function Board({ num }) {
     const [currentShapeX, setCurrentShapeX] = useState(275);
     const [currentShapeY, setCurrentShapeY] = useState(0);
     const currentShape = createRef();
@@ -16,11 +16,13 @@ function Board() {
 
     const handleMovement = (event) => {
         if (event.key === 'ArrowDown') {
-        console.log('Clicked ArrowDown! Should fall to the bottom.');
-        } else if (event.key === 'ArrowLeft' && currentShapeX >= 25) {
-        setCurrentShapeX(prevState => prevState - 25);
-        } else if (event.key === 'ArrowRight' && currentShapeX <= 575) {
-        setCurrentShapeX(prevState => prevState + 25);
+            console.log('Clicked ArrowDown! Should fall to the bottom.');
+        } else if (event.key === 'ArrowLeft') {
+            // has to be changed to dimensions dependant on each shape
+            setCurrentShapeX(prevState => Math.max(prevState - 25, 0));
+        } else if (event.key === 'ArrowRight') {
+            // has to be changed to dimensions dependant on each shape
+            setCurrentShapeX(prevState => Math.min(prevState + 25, 575));
         }
     }
 
@@ -30,7 +32,7 @@ function Board() {
 
     return (
         <div className="Board">
-            <Tetromino ref={currentShape} x={currentShapeX} y={currentShapeY} />
+            <Tetromino num={num} ref={currentShape} x={currentShapeX} y={currentShapeY} />
         </div>
     );
 }
