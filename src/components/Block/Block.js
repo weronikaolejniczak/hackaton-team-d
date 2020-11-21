@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './style.css';
+import './Block.css';
 
 function Block() {
   return <div className='block' />;
