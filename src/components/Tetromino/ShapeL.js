@@ -1,7 +1,6 @@
 import React, { forwardRef } from 'react';
 
 import Block from 'components/Block';
-
 function ShapeL(props, ref) {
     const { x, y } = props;
 
@@ -12,7 +11,7 @@ function ShapeL(props, ref) {
     }
 
     return (
-        <div ref={ref} style={styles}>
+        <div className='block__wrapper shape-l' ref={ref} style={styles}>
             <Block />
             <Block />
             <Block />

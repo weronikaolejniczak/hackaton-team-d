@@ -1,7 +1,15 @@
 import { useState, createRef } from 'react';
 
 import { Board } from 'components';
-import { ShapeL } from 'components/Tetromino';
+import {
+  ShapeI,
+  ShapeJ,
+  ShapeL,
+  ShapeO,
+  ShapeS,
+  ShapeT,
+  ShapeZ,
+} from 'components/Tetromino';
 import './App.css';
 
 function App() {
@@ -16,7 +24,7 @@ function App() {
   setTimeout(() => handleGravity(), 1000);
 
   return (
-    <div className="App">
+    <div className='App'>
       <Board>
         <ShapeL ref={currentShape} x={currentShapeX} y={currentShapeY} />
       </Board>
