@@ -3,13 +3,14 @@ import React from 'react';
 import Block from 'components/Block';
 
 function ShapeJ() {
+  const color = "green";
+
   return (
     <>
-      J
-      <Block />
-      <Block />
-      <Block />
-      <Block />
+      <Block color={color} />
+      <Block color={color} />
+      <Block color={color} />
+      <Block color={color} />
     </>
   );
 }
