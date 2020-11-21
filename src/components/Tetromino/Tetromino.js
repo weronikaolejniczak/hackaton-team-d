@@ -4,7 +4,7 @@ import Shape from './Shape/Shape';
 import './Tetromino.css';
 
 function Tetromino(props, ref) {
-  const { x, y } = props;
+  const { x, y, num } = props;
 
   const position = {
     top: y,
@@ -13,7 +13,7 @@ function Tetromino(props, ref) {
 
   return (
     <div className='Tetromino' ref={ref} style={position}>
-      <Shape />
+      <Shape num={num} />
     </div>
   );
 }

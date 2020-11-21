@@ -20,11 +20,9 @@ import {
     <ShapeZ />,
   ];
 
-function Shape() {
-    let randomNumber = Math.floor(Math.random() * shapeArray.length);
-
+function Shape({ num }) {
     return (
-        <>{shapeArray[randomNumber]}</>
+        <>{shapeArray[num]}</>
     );
 }
 
