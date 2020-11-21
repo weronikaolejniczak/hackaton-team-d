@@ -3,13 +3,14 @@ import React from 'react';
 import Block from 'components/Block';
 
 function ShapeS() {
+  const color = "pink";
+
   return (
     <>
-      S
-      <Block />
-      <Block />
-      <Block />
-      <Block />
+      <Block color={color} />
+      <Block color={color} />
+      <Block color={color} />
+      <Block color={color} />
     </>
   );
 }

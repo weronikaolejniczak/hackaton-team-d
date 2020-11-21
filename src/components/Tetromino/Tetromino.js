@@ -1,10 +1,30 @@
 import React, { forwardRef } from 'react';
 
-import Shape from './Shape/Shape';
+import {
+  ShapeI,
+  ShapeJ,
+  ShapeL,
+  ShapeO,
+  ShapeS,
+  ShapeT,
+  ShapeZ,
+} from './Shape';
 import './Tetromino.css';
+
+const shapeArray = [
+  <ShapeI />,
+  <ShapeJ />,
+  <ShapeL />,
+  <ShapeO />,
+  <ShapeS />,
+  <ShapeT />,
+  <ShapeZ />,
+];
 
 function Tetromino(props, ref) {
   const { x, y } = props;
+
+  let randomNumber = Math.floor(Math.random() * shapeArray.length);
 
   const position = {
     top: y,
@@ -13,7 +33,7 @@ function Tetromino(props, ref) {
 
   return (
     <div className='block__wrapper' ref={ref} style={position}>
-      <Shape />
+      {shapeArray[randomNumber]}
     </div>
   );
 }
