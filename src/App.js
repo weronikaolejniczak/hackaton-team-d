@@ -1,16 +1,6 @@
 import { useState, useEffect, createRef } from 'react';
 
-import { Board } from 'components';
-import {
-  ShapeI,
-  ShapeJ,
-  ShapeL,
-  ShapeO,
-  ShapeS,
-  ShapeT,
-  ShapeZ,
-  Tetromino,
-} from 'components/Tetromino';
+import { Board, Tetromino } from 'components';
 import './App.css';
 
 function App() {
@@ -27,16 +17,11 @@ function App() {
   const handleMovement = (event) => {
     if (event.key === 'ArrowDown') {
       console.log('Clicked ArrowDown! Should fall to the bottom.');
-    } else if (event.key === 'ArrowLeft') {
-      if (currentShapeX >= 25) {
-        setCurrentShapeX(prevState => prevState - 25);
-      }
-    } else if (event.key === 'ArrowRight') {
-      if (currentShapeX <= 575) {
-        setCurrentShapeX(prevState => prevState + 25);
-      }
+    } else if (event.key === 'ArrowLeft' && currentShapeX >= 25) {
+      setCurrentShapeX(prevState => prevState - 25);
+    } else if (event.key === 'ArrowRight' && currentShapeX <= 575) {
+      setCurrentShapeX(prevState => prevState + 25);
     }
-    console.log(currentShapeX);
   }
 
   useEffect(() => {
@@ -47,7 +32,6 @@ function App() {
     <div className='App'>
       <Board>
         <Tetromino ref={currentShape} x={currentShapeX} y={currentShapeY} />
-        <ShapeL ref={currentShape} x={currentShapeX} y={currentShapeY} />
       </Board>
     </div>
   );

@@ -4,16 +4,13 @@ import Block from 'components/Block';
 
 function ShapeS() {
   return (
-    <div className='block__wrapper shape-s'>
+    <>
+      S
       <Block />
       <Block />
       <Block />
       <Block />
-      <Block />
-      <Block />
-      <Block />
-      <Block />
-    </div>
+    </>
   );
 }
 
