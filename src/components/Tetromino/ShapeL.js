@@ -1,17 +1,10 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 
 import Block from 'components/Block';
-function ShapeL(props, ref) {
-    const { x, y } = props;
 
-    const styles = {
-        position: 'relative',
-        top: y,
-        left: x
-    }
-
+function ShapeL() {
     return (
-        <div className='block__wrapper shape-l' ref={ref} style={styles}>
+        <div className='block__wrapper shape-l'>
             <Block />
             <Block />
             <Block />
@@ -20,4 +13,4 @@ function ShapeL(props, ref) {
     );
 }
 
-export default forwardRef(ShapeL);
+export default ShapeL;

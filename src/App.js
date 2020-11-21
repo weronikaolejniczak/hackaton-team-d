@@ -1,16 +1,7 @@
 import { useState, useEffect, createRef } from 'react';
 
 import { Board } from 'components';
-import {
-  ShapeI,
-  ShapeJ,
-  ShapeL,
-  ShapeO,
-  ShapeS,
-  ShapeT,
-  ShapeZ,
-  Tetromino,
-} from 'components/Tetromino';
+import { ShapeL, Tetromino } from 'components/Tetromino';
 import './App.css';
 
 function App() {
@@ -46,8 +37,7 @@ function App() {
   return (
     <div className='App'>
       <Board>
-        <Tetromino ref={currentShape} x={currentShapeX} y={currentShapeY} />
-        <ShapeL ref={currentShape} x={currentShapeX} y={currentShapeY} />
+        <Tetromino ref={currentShape} />
       </Board>
     </div>
   );

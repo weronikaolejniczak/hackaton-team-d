@@ -1,3 +1,7 @@
+.block__wrapper {
+    position: relative;
+}
+
 .shape-i {
     background-color: yellow;
 }

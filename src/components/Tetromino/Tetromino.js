@@ -9,28 +9,21 @@ import {
   ShapeZ,
 } from 'components/Tetromino';
 
+const shapeArray = [
+  <ShapeI />,
+  <ShapeJ />,
+  <ShapeL />,
+  <ShapeO />,
+  <ShapeS />,
+  <ShapeT />,
+  <ShapeZ />,
+];
+
 function Tetromino(props, ref) {
-  const { x, y } = props;
-
-  const styles = {
-    position: 'relative',
-    top: y,
-    left: x,
-  };
-
-  const shapeArray = [
-    <ShapeI />,
-    <ShapeJ />,
-    <ShapeL />,
-    <ShapeO />,
-    <ShapeS />,
-    <ShapeT />,
-    <ShapeZ />,
-  ];
-
   let randomNumber = Math.floor(Math.random() * shapeArray.length);
+
   return (
-    <div className='block__wrapper' ref={ref} style={styles}>
+    <div className='block__wrapper' ref={ref}>
       {shapeArray[randomNumber]}
     </div>
   );
