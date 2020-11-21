@@ -1,4 +1,3 @@
-export { default as Shape } from './Shape';
 export { default as ShapeI } from './ShapeI';
 export { default as ShapeJ } from './ShapeJ';
 export { default as ShapeL } from './ShapeL';
