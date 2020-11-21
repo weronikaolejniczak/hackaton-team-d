@@ -1,9 +1,13 @@
+import { Board } from 'components';
+import { ShapeL } from 'components/Tetromino';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      Tetris
+      <Board>
+        <ShapeL />
+      </Board>
     </div>
   );
 }
