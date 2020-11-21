@@ -2,16 +2,16 @@ import React from 'react';
 
 import Block from 'components/Block';
 
-function ShapeL() {
+function ShapeO() {
   return (
-    <div className='block__wrapper shape-t'>
+    <>
+      O
       <Block />
       <Block />
       <Block />
       <Block />
-      <Block />
-    </div>
+    </>
   );
 }
 
-export default ShapeL;
+export default ShapeO;

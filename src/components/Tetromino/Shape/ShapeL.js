@@ -4,12 +4,13 @@ import Block from 'components/Block';
 
 function ShapeL() {
     return (
-        <div className='block__wrapper shape-l'>
+        <>
+            L
             <Block />
             <Block />
             <Block />
             <Block />
-        </div>
+        </>
     );
 }
 

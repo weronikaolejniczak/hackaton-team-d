@@ -1,17 +1,17 @@
 import React from 'react';
 
 import Block from 'components/Block';
-import './style.css';
 
-function ShapeI() {
+function ShapeJ() {
   return (
-    <div className='block__wrapper shape-i'>
+    <>
+      J
       <Block />
       <Block />
       <Block />
       <Block />
-    </div>
+    </>
   );
 }
 
-export default ShapeI;
+export default ShapeJ;

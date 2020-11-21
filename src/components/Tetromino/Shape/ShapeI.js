@@ -2,15 +2,16 @@ import React from 'react';
 
 import Block from 'components/Block';
 
-function ShapeO() {
+function ShapeI() {
   return (
-    <div className='block__wrapper shape-o'>
+    <>
+      I
       <Block />
       <Block />
       <Block />
       <Block />
-    </div>
+    </>
   );
 }
 
-export default ShapeO;
+export default ShapeI;

@@ -2,17 +2,16 @@ import React from 'react';
 
 import Block from 'components/Block';
 
-function ShapeJ() {
+function ShapeL() {
   return (
-    <div className='block__wrapper shape-j'>
+    <>
+      L
       <Block />
       <Block />
       <Block />
       <Block />
-      <Block />
-      <Block />
-    </div>
+    </>
   );
 }
 
-export default ShapeJ;
+export default ShapeL;
