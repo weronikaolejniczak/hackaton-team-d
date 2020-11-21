@@ -12,7 +12,7 @@ function Tetromino(props, ref) {
   }
 
   return (
-    <div className='block__wrapper' ref={ref} style={position}>
+    <div className='Tetromino' ref={ref} style={position}>
       <Shape />
     </div>
   );
