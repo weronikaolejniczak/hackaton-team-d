@@ -4,7 +4,11 @@ import Block from 'components/Block';
 
 function ShapeS() {
   return (
-    <div className='block__wrapper'>
+    <div className='block__wrapper shape-s'>
+      <Block />
+      <Block />
+      <Block />
+      <Block />
       <Block />
       <Block />
       <Block />

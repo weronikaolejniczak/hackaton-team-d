@@ -1,12 +1,26 @@
 import { Board } from 'components';
-import { ShapeL } from 'components/Tetromino';
+import {
+  ShapeI,
+  ShapeJ,
+  ShapeL,
+  ShapeO,
+  ShapeS,
+  ShapeT,
+  ShapeZ,
+} from 'components/Tetromino';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Board>
+        <ShapeI />
+        <ShapeJ />
         <ShapeL />
+        <ShapeO />
+        <ShapeS />
+        <ShapeT />
+        <ShapeZ />
       </Board>
     </div>
   );

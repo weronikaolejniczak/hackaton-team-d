@@ -4,7 +4,8 @@ import Block from 'components/Block';
 
 function ShapeL() {
   return (
-    <div className='block__wrapper'>
+    <div className='block__wrapper shape-t'>
+      <Block />
       <Block />
       <Block />
       <Block />
