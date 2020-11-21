@@ -5,3 +5,4 @@ export { default as ShapeO } from './ShapeO';
 export { default as ShapeS } from './ShapeS';
 export { default as ShapeT } from './ShapeT';
 export { default as ShapeZ } from './ShapeZ';
+export { default as Shape } from './Shape';
