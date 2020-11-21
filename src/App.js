@@ -18,20 +18,27 @@ function App() {
   const currentShape = createRef();
 
   const handleGravity = () => {
-    (currentShapeY < 500) && setCurrentShapeY(currentShapeY + 25)
+    if (currentShapeY < 500) {
+      setCurrentShapeY(currentShapeY + 25);
+    }
   };
+
+  setTimeout(() => handleGravity(), 1000);
 
   const handleMovement = (event) => {
     if (event.key === 'ArrowDown') {
       console.log('Clicked ArrowDown! Should fall to the bottom.');
     } else if (event.key === 'ArrowLeft') {
-      setCurrentShapeX(prevState => prevState - 25);
+      if (currentShapeX >= 25) {
+        setCurrentShapeX(prevState => prevState - 25);
+      }
     } else if (event.key === 'ArrowRight') {
-      setCurrentShapeX(prevState => prevState + 25);
+      if (currentShapeX <= 575) {
+        setCurrentShapeX(prevState => prevState + 25);
+      }
     }
+    console.log(currentShapeX);
   }
-
-  setTimeout(() => handleGravity(), 1000);
 
   useEffect(() => {
     document.addEventListener('keydown', handleMovement);
