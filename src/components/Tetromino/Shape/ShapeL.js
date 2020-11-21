@@ -3,14 +3,15 @@ import React from 'react';
 import Block from 'components/Block';
 
 function ShapeL() {
+    const color = "blue";
+
     return (
-        <>
-            L
-            <Block />
-            <Block />
-            <Block />
-            <Block />
-        </>
+      <>
+        <Block color={color} />
+        <Block color={color} />
+        <Block color={color} />
+        <Block color={color} />
+      </>
     );
 }
 

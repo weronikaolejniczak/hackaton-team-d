@@ -3,13 +3,14 @@ import React from 'react';
 import Block from 'components/Block';
 
 function ShapeO() {
+  const color = "purple";
+
   return (
     <>
-      O
-      <Block />
-      <Block />
-      <Block />
-      <Block />
+      <Block color={color} />
+      <Block color={color} />
+      <Block color={color} />
+      <Block color={color} />
     </>
   );
 }
