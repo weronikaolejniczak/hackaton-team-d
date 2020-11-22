@@ -1,7 +1,6 @@
 import React, { forwardRef } from 'react';
 
 import {
-  Shape,
   ShapeI,
   ShapeJ,
   ShapeL,
@@ -11,7 +10,6 @@ import {
   ShapeZ,
 } from './Shape';
 import './Tetromino.css';
-export { Shape } from './Shape';
 
 const shapeArray = [
   <ShapeI />,
@@ -33,7 +31,7 @@ function Tetromino(props, ref) {
 
   return (
     <div className='Tetromino' ref={ref} style={position}>
-      <Shape num={num} />
+      {shapeArray[num]}
     </div>
   );
 }
