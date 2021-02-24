@@ -5,7 +5,7 @@
 
 ## Description
 
-Tetris game created by [Szkoła Reacta](https://github.com/szkola-reacta)'s Team D and later on its scope extended on this fork.
+Tetris game created by [Szkoła Reacta](https://github.com/szkola-reacta)'s Team D on Hackaton and later on its scope extended on this fork.
 
 It's written in JavaScript with React library.
 
