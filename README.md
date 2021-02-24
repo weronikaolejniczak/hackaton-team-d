@@ -1,6 +1,13 @@
-# Tetris game
+<h1 align="center">Tetris Game</h1>
+<h3 align="center"><a href="https://weronikaolejniczak.github.io/tetris/" target="_blank" rel="noopener noreferrer">Demo</a></h3>
 
-Tetris game created by [Szkoła Reacta](https://github.com/szkola-reacta)'s Team D.
+---
+
+## Description
+
+Tetris game created by [Szkoła Reacta](https://github.com/szkola-reacta)'s Team D and later on its scope extended on this fork.
+
+It's written in JavaScript with React library.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
