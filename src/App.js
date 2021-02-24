@@ -1,7 +1,12 @@
+// @flow
+
+import React from 'react';
+import type { Element } from 'react';
+
 import { Board } from 'components';
 import './App.css';
 
-function App() {
+const App = (): Element<'div'> => {
   const tetrominoNum = Math.floor(Math.random() * 7);
 
   return (
