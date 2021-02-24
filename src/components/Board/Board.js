@@ -1,9 +1,15 @@
+// @flow
+
 import React, { useState, useEffect, createRef } from 'react';
 
 import { Tetromino } from 'components';
 import './Board.css';
 
-function Board({ num }) {
+type PropsType = {
+    num: number
+}
+
+const Board: React$ComponentType<PropsType> = ({ num }): React$Element<'div'> => {
     const [currentShapeX, setCurrentShapeX] = useState(275);
     const [currentShapeY, setCurrentShapeY] = useState(0);
     const currentShape = createRef();
@@ -18,10 +24,10 @@ function Board({ num }) {
         if (event.key === 'ArrowDown') {
             console.log('Clicked ArrowDown! Should fall to the bottom.');
         } else if (event.key === 'ArrowLeft') {
-            // has to be changed to dimensions dependant on each shape
+            // $todo: has to be changed to dimensions dependant on each shape
             setCurrentShapeX(prevState => Math.max(prevState - 25, 0));
         } else if (event.key === 'ArrowRight') {
-            // has to be changed to dimensions dependant on each shape
+            // $todo: has to be changed to dimensions dependant on each shape
             setCurrentShapeX(prevState => Math.min(prevState + 25, 575));
         }
     }

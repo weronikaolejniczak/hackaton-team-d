@@ -1,3 +1,5 @@
+// @flow
+
 import React, { forwardRef } from 'react';
 
 import {
@@ -21,9 +23,13 @@ const shapeArray = [
   <ShapeZ />,
 ];
 
-function Tetromino(props, ref) {
-  const { x, y, num } = props;
+type PropsType = {
+  x: number,
+  y: number,
+  num: number
+}
 
+const Tetromino: Function = ({ x, y, num }: PropsType, ref) => {
   const position = {
     top: y,
     left: x,
@@ -36,4 +42,4 @@ function Tetromino(props, ref) {
   );
 }
 
-export default forwardRef(Tetromino);
+export default (forwardRef(Tetromino): React$AbstractComponent<mixed, mixed>);
